@@ -1,0 +1,32 @@
+def plus(x,y):
+    return(x+y)
+def minus(x,y):
+    return(x-y)
+def mult(x,y):
+    return(x*y)
+def div(x,y):
+    return(x/y)
+def sq(x,y):
+    return(x**y)
+
+operation = {
+    "+" : plus,
+    "-" : minus,
+    "*" : mult,
+    "/" : div,
+    "**" : sq,
+}
+
+x = int(input("enter your number: \n"))
+start = True
+while start:
+    op = input("please choose the math operation: \n + , - , * , / , **: \n")
+    y = int(input("enter your next number: \n"))
+    calculate = operation[op]
+    answer = calculate(x, y)
+    print(f"your answer is: {answer}")
+    continiue = input("do you want to continiue? write 'yes' or 'no': \n")
+    if continiue == "yes":
+        x = answer
+    elif continiue == "no":
+        start = False
