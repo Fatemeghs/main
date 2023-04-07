@@ -1,0 +1,37 @@
+import random
+rock = "✊"
+paper = "✋"
+scissors = "✌️"
+player = int(input("enter your choice: \n ✊:0 ✋:1 ✌️:2 \n"))
+if player==0:
+    print(f"your choice: {rock}")
+elif player==1:
+    print(f"your choice: {paper}")
+elif player==2:
+        print(f"your choice: {scissors}")
+r = random.randint(0, 2)
+if r==0:
+    print(f"computer choice: {rock}")
+    if player == 0:
+        print("equal! play again...")
+    if player == 1:
+        print("HoOora! you win!")
+    if player == 2:
+        print("you lose!")
+elif r==1:
+    print(f"computer choice: {paper}")
+    if player == 0:
+        print("you lose!")
+    if player == 1:
+        print("equal! play again...")
+    if player == 2:
+        print("HoOora! you win!")
+elif r==2:
+    print(f"computer choice: {scissors}")
+    if player == 0:
+        print("HoOora! you win!")
+    if player == 1:
+        print("you lose!")
+    if player == 2:
+        print("equal! play again...")
+        
